@@ -37,6 +37,7 @@ class createHands
             $card = $number[$select_number].$suit[$select_suit]." ";
             echo $card;
         }
+        
     }
 }
 

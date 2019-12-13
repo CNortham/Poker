@@ -14,6 +14,7 @@ class createHands
         $number = array("2","3","4","5","6","7","8","9","J","Q","K","A");
         $suit = array("S","C","H","D");
 
+        
         //Creates first card//
         $select_number = array_rand($number);
         $select_suit = array_rand($suit);

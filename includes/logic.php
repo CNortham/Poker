@@ -10,6 +10,7 @@ if($unique_p1_hand == 5)
 {
     $Same = "No Duplicates";
 }
+
 elseif($unique_p1_hand == 2)
 {
     $Same = "Three of a Kind";

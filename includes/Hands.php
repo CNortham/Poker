@@ -14,36 +14,28 @@ class createHands
         $number = array("10","J","Q","K","A");
         $suit = array("H");
 
-
-        //Creates first card//
-        $select_number = array_rand($number);
-        $select_suit = array_rand($suit);
-        $card = $number[$select_number].$suit[$select_suit];
-        $p1_hand_array = array($card);
+        // Create array and counter
+        $p1_hand_array = [];
         $i = 0;
 
-        //Fills rest of hand//
-        while($i != 4 )
-        {
-            //Checks if duplicate card is created//
-            if(in_array($card,$p1_hand_array))
-            {
-                $select_number = array_rand($number);
-                $select_suit = array_rand($suit);
-                $card = $number[$select_number].$suit[$select_suit];
-                array_push($p1_hand_array,$card);
-                $i++;
-            }
+        // do while to create cards
+        do {
             $select_number = array_rand($number);
             $select_suit = array_rand($suit);
             $card = $number[$select_number].$suit[$select_suit];
+            
+            if(!in_array($card, $p1_hand_array))
+            {
+                array_push($p1_hand_array,$card);
+                $i++;
+            }
         }
-        
-        var_dump($p1_hand_array);
-        
+        while($i != 4);
 
-        include("includes\cards.php");
-        include("includes\logic.php");
+        var_dump($p1_hand_array);
+
+       // include("includes\cards.php");
+        //include("includes\logic.php");
 
     }
 
